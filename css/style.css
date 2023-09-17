@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-soft-blue-color: #8bacda;
+    --primary-cyan-color: #00fff7;
+    --neutral-very-dark-blue-main-bg-color: #0d192b;
+    --neutral-very-darl-blue-card-bg-color: #14253d;
+    --neutral-very-dark-blue-line-color: #2f415b;
+    --neutral-white-color: #fff;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--neutral-very-dark-blue-main-bg-color);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 5rem auto;
+    position: relative;
+}
+
+#card-content.card {
+    background: var(--neutral-very-darl-blue-card-bg-color);
+    max-width: 350px;
+    padding: 1.4rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(3, 6, 10, 0.5);
+}
+
+#card-content .main-image {
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+
+#card-content .main-image img {
+    width: 100%;
+    border-radius: 8px;
+    background: none;
+    display: block;
+}
+
+#card-content .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 255, 247, 0.5);
+    border-radius: 8px;
+    display: none;
+}
+
+#card-content .img-overlay img {
+    position: absolute;
+    top: 43%;
+    left: 43%;
+    width: 50px;
+    border-radius: 8px;
+}
+
+#card-content .main-image:hover .img-overlay {
+    display: block;
+    cursor: pointer;
+}
+
+#card-content .author img {
+    width: 45px;
+    border: 1px solid var(--neutral-white-color);
+    border-radius: 50%;
+}
+
+#card-content .info .title h2 {
+    color: var(--neutral-white-color);
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+#card-content .info .subtitle p {
+    color: var(--primary-soft-blue-color);
+    font-weight: 300;
+}
+
+#card-content .remaining {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0 1.2rem;
+    border-bottom: 2px solid var(--neutral-very-dark-blue-line-color);
+}
+
+#card-content .ethereum,
+#card-content .days {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-content .ethereum img,
+#card-content .author img,
+#card-content .days img {
+    margin-right: 0.5rem;
+}
+
+#card-content .ethereum {
+    color: var(--primary-cyan-color);
+}
+
+#card-content .days {
+    color: var(--primary-soft-blue-color);
+}
+
+#card-content .author {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+#card-content .author p {
+    color: var(--primary-soft-blue-color);
+    font-weight: 300;
+}
+
+#card-content .author span {
+    color: var(--neutral-white-color);
+    font-weight: 300;
+}
